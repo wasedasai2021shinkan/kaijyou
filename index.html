@@ -1,0 +1,315 @@
+<!doctype HTML>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>会場整備局</title>
+        <meta name="description" content="会場整備局">
+        <link rel="icon" type="png" href="logo.png">
+        <link rel="stylesheet" href="kaijyouseibi.css">
+    </head>
+
+    <body>
+        <header>
+            <!--▽▽ヘッダーロゴ▽▽-->
+                  <div class="logo1">
+                      <a href="#" id="headerlogo"><img src="headericon.png" class="hedlogo">
+                      </a>
+                  </div>
+            <!--△△ヘッダーロゴ△△-->
+            
+            
+            <!--▽▽ハンバーガーメニュー▽▽-->
+                  <div id="hamburger">
+                      <div class="icon">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </div>
+            <!--△△ハンバーガーメニュー△△-->
+            
+             
+            <!--▽▽ハンバーガーメニューのリスト▽▽-->
+                  <nav class="sm navi">
+                    <ul class="lists">
+                      <li class="lili"><a  class="listwords" href="#">代表挨拶</a></li>
+                      <li class="lili"><a  class="listwords" href="#">早稲田祭について</a></li>
+                      <li class="lili"><a  class="listwords" href="#">新歓イベント</a></li>
+                      <li class="lili"><a  class="listwords" href="#">活動について</a></li>
+                      <li class="lili"><a  class="listwords" href="#">連載記事</a></li>
+                      <li class="lili"><a  class="listwords" href="#">年間スケジュール</a></li>
+                      <li class="lili"><a  class="listwords" href="#">フォトギャラリー</a></li>
+                      <li class="lili"><a  class="listwords" href="#">入会方法</a></li>
+                      <li class="lili"><a  class="listwords" href="#">お問い合わせ</a></li>
+                   </ul>
+                 </nav>
+            <!--△△ハンバーガーメニューのリスト△△-->
+            
+        
+            <!--▽▽ヘッダーリスト▽▽-->
+                  <nav class="pc navi">  <!--pcクラスを追記-->
+                    <ul class="lists">
+                      <li class="lili"><a  class="listwords" href="#">代表挨拶</a></li>
+                      <li class="lili"><a  class="listwords" href="#">新歓イベント</a></li>
+                      <li class="lili"><a  class="listwords" href="#">連載記事</a></li>
+                      <li class="lili"><a  class="listwords" href="#">入会方法</a></li>
+                      <li class="lili"><a  class="listwords" href="#">お問い合わせ</a></li>
+                    </ul>
+                  </nav>
+            <!--△△ヘッダーリスト△△-->
+            
+                </header>
+            
+            
+            <!--▽▽jQuery▽▽-->
+                <script src="jquery-3.6.0.min.js"></script>
+                  <script>
+                    $('#hamburger').on('click', function(){
+                    $('.icon').toggleClass('close');
+                    $('.sm').slideToggle();
+                    });
+              
+                  </script>
+            <!--△△jQuery△△-->
+ 
+
+
+        <style>
+            header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 0px;
+    background-color:#78c1cd;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  }
+  
+  
+  .lili:hover{
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    opacity: 0.85;
+  
+  }
+  
+  .logo1 {
+    font-size: 25px;}
+    
+    .hedlogo{
+  height:55px;
+  width:55px;
+  margin-left:6px;
+    }
+    
+  
+  .hedlogo:hover  {
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    opacity: 0.85;
+   
+  }
+   .navi{
+    margin: 0 0 0 auto;
+  }
+  
+  .lists {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .listwords {
+    color: #eaf4fc;
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    padding: 0 20px;
+  }
+  
+  .sm {
+    display: none;
+  }
+  .toppagelogo{
+    height:500px;
+    width:500px;
+    padding:400px;
+  margin:0 auto;
+  }
+  /*---------------------------------------------------------------*/
+  @media (max-width: 900px) {
+  
+    .pc {
+      display: none;
+    }
+  
+    #hamburger {
+      background-color: transparent;
+      position:relative;
+      float:right
+      cursor:pointer;
+      margin: 0 0 0 auto;
+      height: 60px;
+      width: 60px;
+    }
+  
+    .icon span {
+      position: absolute;
+      left: 15px;
+      width: 30px;
+      height: 4px;
+      background-color:#eaf4fc;
+      border-radius: 8px;
+      transition: ease 0.75s;
+    }
+  
+    .icon span:nth-of-type(1) {
+      top: 16px;
+    }
+    .icon span:nth-of-type(2) {
+      top: 28px;
+    }
+    .icon span:nth-of-type(3) {
+      bottom: 16px;
+    }
+  
+    .close span:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 28px;
+    }
+  
+    .close span:nth-of-type(2) {
+      opacity: 0;
+    }
+  
+    .close span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+    }
+  
+    .sm {
+        top: 60px;
+        left: 0px;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        background-color: #78c1cd;
+        
+    
+    }
+  
+   .lists {
+      flex-direction: column;
+    }
+  
+    .listwords {
+      text-align: center; 
+      border-top: solid 0.5px #eaf4fc;
+    }
+  
+  
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+        </style>
+        <div class="titlephoto">
+        <img src="会場整備局.png" alt="会場整備局" width="100%" height="auto">
+    </div>
+    
+    
+        <div class="wrapper">
+
+      <h2>会場整備局とは</h2>
+        <p class="setsumei">
+          会場整備局は祭の基盤を整え、大学を早稲田祭の会場へとつくりあげている局です。
+          来場者案内、入退構者の管理、環境対策、消毒活動、警備や整備や車両入構の管理、備品や電力の管理など活動は多岐に渡ります。
+          どれもインフラとして欠かせない大切な活動で、責任は大きいです。
+          しかし、早稲田祭までの期間を綿密な準備に費やすことで、当日は大きなやりがいと達成感を得ることができます。
+          また、そうして見ることができる自分たちで創りあげた早稲田祭当日の景色は、みなさんの一生の思い出になると思います。
+          会場整備局には頑張るあなたを応援する居場所があります。
+          私たちと共に、何かに精一杯取り組んで、達成感を得ることが出来る。
+          そんな経験を早稲田祭という特別な祭典でしてみませんか？
+        </p>
+        
+        <h3>◯動線管理チーム
+        </h3>
+        <p>
+            <!-- チーム紹介の文字情報をここに入れる -->
+            警備班、整備班、車両班の3つの班に分かれて会場の基盤をつくるための活動を行うチームです。さまざまな局やチームと関わることができ、1年目から現場をまとめる統括として活躍することができます！ 2020年ではオンライン早稲田祭に参加する団体さんのためのウイルス感染防止ルート作成など、コロナ禍においても会場にいる全ての人の安全性・快適さを追及しました。私たちと一緒に、新しい早稲田祭を創っていきましょう！
+        </p>
+
+
+
+        <h3>◯環境チーム
+        </h3>
+        <p>
+             <!-- チーム紹介の文字情報をここに入れる -->
+             早稲田祭に携わる全ての人が快適に祭を楽しめるよう、早稲田祭のきれいを最前線で守るチームです。15tものごみが発生する早稲田祭において、環境チームの活動は必要不可欠！ 当日の分別指導や業者対応などを通じて、さまざまな人と関わりを持つことができるのが魅力です！ 昨年のオンライン開催では、消毒活動を主な仕事内容として活動していました！ 環境チームはあなたを待っています！！ 私たちと環境に優しい、美しい早稲田祭を共に創りあげていきましょう！
+        </p>
+
+
+        <h3>○備品電力チーム
+        </h3>
+        <p>
+            <!-- チーム紹介の文字情報をここに入れる -->
+            早稲田祭で使用される備品と電力を管理する活動を行っているチームです。備品は大学や業者からお借りして、参加団体・参加者や運営スタッフへ貸し出しています。大学や業者、早大生などと早稲田祭に関わる人々を繋ぎ祭の基盤をつくる、なくてはならないチームです！ 日本一の学園祭を支えてみませんか？ 一緒に素晴らしい早稲田祭を創りあげましょう！
+        </p>
+
+
+        <h3>○会場案内チーム
+        </h3>
+        <p>
+             <!-- チーム紹介の文字情報をここに入れる -->
+             会場案内チームは、来場者や参加団体・参加者など、早稲田祭に訪れる全ての主体に対して案内を行うチームです。活動は、主にインフォメーション関連と案内物関連の2つを行っています。そのほか、オンライン開催だった早稲田祭2020では、感染症対策という意味で参加団体・参加者のキャンパスの入構・退構を管理する活動を行いました。このように、このチームは来場する全ての人が快適に楽しめる祭を目指し、日々奮闘しています！
+受け取る人・楽しむ人がそこにいてこその、早稲田文化の祭典、早稲田祭。祭に魅せられる人の笑顔がさらに輝くよう、私たちと一緒に祭を支えましょう！
+
+        </p>
+
+    </div>
+</div>
+</div>
+</div>
+
+    </body>
+</body>
+</body>
+
+<footer>
+
+    <div class="wrapper2">
+        <p class="title">WASEDASAI OPERATION STAFF</br>SHINKAN 2021</p>
+        <div class="innerbox">
+              
+            <a href="https://twitter.com/wasedasai_new?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" > 
+                <img src="twitter.png" alt="twitter" width="80" height="80"　border="0"> 
+            </a>
+
+            <a href="https://www.instagram.com/wasedasai_new/" target="_blank" > 
+                <img src="instagram.png" alt="instagram" width="80" height="80"　border="0"> 
+            </a>
+
+            <a href="https://qr-official.line.me/sid/M/011uqnra.png" target="_blank" > 
+                <img src="line.png" alt="line" width="80" height="80"　border="0"> 
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCFh9blapIkxPf4Al3L87QHQ" target="_blank" > 
+                <img src="youtube.png" alt="youtube" width="80" height="80"　border="0"> 
+            </a>
+        </div>
+    </div>
+        <div class="footerlogo">
+            <a href="toppage.html" target="_blank" > 
+                <img src="footerlogo.png" alt="footerlogo" width="40%" height="40%"　border="0"> 
+            </a>
+        </div>
+
+
+        </div>
+        <p><small>Copyright @ WASEDASAI2021 Staff All Rights Reserved. </small></p>
+    </div>
+</footer>
+</html>
